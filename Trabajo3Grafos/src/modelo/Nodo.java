@@ -6,22 +6,45 @@ import interfaces.INodo;
 
 public class Nodo implements INodo {
 
-    private int valor;
+    private Object valor;
+    private ArrayList<INodo> vecinos;
 
-    public Nodo(int valor) {
+    public Nodo(Object valor) {
+		this.valor = valor;
+		this.vecinos = new ArrayList<INodo>();
+	}
+
+    
+
+    public Object getValor() {
+		return valor;
+	}
+
+
+
+	public void setValor(Object valor) {
 		this.valor = valor;
 	}
 
-	public int getValor() {
-        return valor;
-    }
 
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
 
-    public void agregarVecino(INodo vecino) {
+	public ArrayList<INodo> getVecinos() {
+		return vecinos;
+	}
+
+	public void setVecinos(ArrayList<INodo> vecinos) {
+		this.vecinos = vecinos;
+	}
+
+	public void agregarVecino(INodo vecino) {
+    	if (!(vecinos.contains(vecino))) {
+    		vecinos.add(vecino);
+    	}
        
     }
+
+    
+    
+    
 }
 

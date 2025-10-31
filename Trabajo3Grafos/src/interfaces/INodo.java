@@ -1,7 +1,7 @@
 package interfaces;
 
 public interface INodo {
-    int getValor();
-    void setValor(int valor);
+    Object getValor();
+    void setValor(Object valor);
     void agregarVecino(INodo vecino);
 }

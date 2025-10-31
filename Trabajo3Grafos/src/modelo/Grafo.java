@@ -7,11 +7,11 @@ import interfaces.IGrafo;
 
 public class Grafo implements IGrafo{
 	
-	private Map<Integer, Nodo> nodos = new HashMap<>();
+	private Map<Object, Nodo> nodos = new HashMap<>();
 
 
 
-	public void agregarNodo(int valor) {
+	public void agregarNodo(Object valor) {
 		if (!nodos.containsKey(valor)){
 			nodos.put(valor, new Nodo(valor));
 		
@@ -19,7 +19,7 @@ public class Grafo implements IGrafo{
 	}
 	
 	
-	public void agregarArista(int origen, int destino) {
+	public void agregarArista(Object origen, Object destino) {
 		if (nodos.containsKey(origen) && nodos.containsKey(destino)) {
 			Nodo nodoOrigen = nodos.get(origen);
 			Nodo nodoDestino = nodos.get(destino);
@@ -31,6 +31,23 @@ public class Grafo implements IGrafo{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void bfs(Object inicio) {
+		
+	}
+	
+	public void dfs(Object inicio) {
+		
+		
+	}
+
+
+	@Override
+	public String toString() {
+		return "Grafo [nodos=" + nodos + "]";
+	}
+	
+	
 }
 
 
