@@ -2,6 +2,7 @@ package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import interfaces.INodo;
 
 public class Nodo implements INodo {
@@ -11,7 +12,7 @@ public class Nodo implements INodo {
 
     public Nodo(Object valor) {
 		this.valor = valor;
-		this.vecinos = new ArrayList<INodo>();
+		this.vecinos = new ArrayList<>();
 	}
 
     
@@ -28,13 +29,10 @@ public class Nodo implements INodo {
 
 
 
-	public ArrayList<INodo> getVecinos() {
+	public List<INodo> getVecinos() {
 		return vecinos;
 	}
 
-	public void setVecinos(ArrayList<INodo> vecinos) {
-		this.vecinos = vecinos;
-	}
 
 	public void agregarVecino(INodo vecino) {
     	if (!(vecinos.contains(vecino))) {

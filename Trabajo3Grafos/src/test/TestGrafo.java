@@ -19,7 +19,7 @@ public class TestGrafo {
 		Persona p5 = new Persona("S", 23, "44423507", 1.60F , 69.0f , c1);
 		Persona p6 = new Persona("Yazmin", 23, "44423507", 1.60F , 69.0f , c1);
 		Persona p7 = new Persona("Yaz", 23, "44423507", 1.60F , 69.0f , c1);
-		Persona p8 = new Persona("Yaz", 23, "44423507", 1.60F , 69.0f , c1);
+		Persona p8 = new Persona("Yazi", 23, "44423507", 1.60F , 69.0f , c1);
 		
 		
 		IGrafo grafo = new Grafo();
@@ -36,13 +36,23 @@ public class TestGrafo {
 		
 		grafo.agregarArista(p1, p2);
 		grafo.agregarArista(p1, p3);
-		grafo.agregarArista(p1, p1);
-		grafo.agregarArista(p2, p2);
+		grafo.agregarArista(p2, p4);
+		grafo.agregarArista(p2, p3);
 		grafo.agregarArista(p2, p5);
 		grafo.agregarArista(p3, p6);
-		grafo.agregarArista(p3, p2);
 		grafo.agregarArista(p8, p4);
+		grafo.agregarArista(p7, p6);
 		grafo.agregarArista(p7, p8);
+		
+		
+		
+		grafo.toString();
+		
+		System.out.println("\nRecorrido BFS: ");
+		grafo.bfs(p1);
+		
+		System.out.println("\n\nRecorrido DFS: ");
+		grafo.dfs(p1);
 		
 		
 		
