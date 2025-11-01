@@ -22,7 +22,7 @@ public class TestGrafo {
 		Persona p8 = new Persona("Yazi", 23, "44423507", 1.60F , 69.0f , c1);
 		
 		
-		IGrafo grafo = new Grafo();
+		IGrafo<Persona> grafo = new Grafo<Persona>();
 		
 		grafo.agregarNodo(p1);
 		grafo.agregarNodo(p2);
@@ -55,11 +55,91 @@ public class TestGrafo {
 		grafo.dfs(p1);
 		
 		
+		//---------------------------------------------------------------------------
+		//PRUEBAS CON TIPO INTEGER
 		
-
+		/* IGrafo<Integer> grafo = new Grafo<Integer>();
+		
+		grafo.agregarNodo(1);
+		grafo.agregarNodo(5);
+		grafo.agregarNodo(4);
+		grafo.agregarNodo(8);
+		grafo.agregarNodo(7);
+		grafo.agregarNodo(12);
+		grafo.agregarNodo(11);
+		grafo.agregarNodo(15);
+		
+		
+		grafo.agregarArista(1, 5);
+		grafo.agregarArista(1, 4);
+		grafo.agregarArista(5, 8);
+		grafo.agregarArista(5, 4);
+		grafo.agregarArista(5, 7);
+		grafo.agregarArista(4, 12);
+		grafo.agregarArista(15, 8);
+		grafo.agregarArista(11, 12);
+		grafo.agregarArista(11, 15);
 		
 		
 		
+		grafo.toString();
+		
+		System.out.println("\nRecorrido BFS: "); 
+		grafo.bfs(1);
+		
+		//Recorrido BFS: 
+		//1 5 4 8 7 12 15 11 
+		
+		System.out.println("\n\nRecorrido DFS: ");
+		grafo.dfs(1);
+		
+		//Recorrido DFS:
+		//1 4 12 11 15 8 5 7
+		
+		*/
+		
+		
+		//---------------------------------------------------------------------------
+				//PRUEBAS CON TIPO STRING
+				
+			/* IGrafo<String> grafo = new Grafo<String>();
+				
+				grafo.agregarNodo("Uno");
+				grafo.agregarNodo("Cinco");
+				grafo.agregarNodo("Cuatro");
+				grafo.agregarNodo("Ocho");
+				grafo.agregarNodo("Siete");
+				grafo.agregarNodo("Doce");
+				grafo.agregarNodo("Once");
+				grafo.agregarNodo("Quince");
+				
+				
+				grafo.agregarArista("Uno", "Cinco");
+				grafo.agregarArista("Uno", "Cuatro");
+				grafo.agregarArista("Cinco", "Ocho");
+				grafo.agregarArista("Cinco", "Cuatro");
+				grafo.agregarArista("Cinco", "Siete");
+				grafo.agregarArista("Cuatro", "Doce");
+				grafo.agregarArista("Quince", "Ocho");
+				grafo.agregarArista("Once", "Doce");
+				grafo.agregarArista("Once", "Quince");
+				
+				
+				
+				grafo.toString();
+				
+				System.out.println("\nRecorrido BFS: "); 
+				grafo.bfs("Uno");
+				
+				//Recorrido BFS: 
+				//Uno Cinco Cuatro Ocho Siete Doce Quince Once
+				
+				System.out.println("\n\nRecorrido DFS: ");
+				grafo.dfs("Uno");
+				
+				//Recorrido DFS:
+				//Uno Cuatro Doce Once Quince Ocho Cinco Siete
+				*/
 		
 		
 	}

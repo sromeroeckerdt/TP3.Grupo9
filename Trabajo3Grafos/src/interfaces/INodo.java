@@ -1,14 +1,14 @@
 package interfaces;
 
-public interface INodo {
+public interface INodo<T> {
 	
 	//Pre-Condición:
 	//Post-Condición:
-    Object getValor();
+    T getValor();
     
     //Pre-Condición:
   	//Post-Condición:
-    void setValor(Object valor);
+    void setValor(T valor);
     
     //Pre-Condición:
   	//Post-Condición:
