@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -40,8 +42,23 @@ public class Grafo<T> implements IGrafo<T>{
 	
 	@Override
 	public void matrizDeAdyacencia() {
-		// TODO Auto-generated method stub
-		
+		List<T> claves = new ArrayList<>(nodos.keySet());
+		int ancho = 8; //variable para definir el la distancia entre cada columna, solo infiere en lo visual, por eso está aplicada en los system.out
+		System.out.printf("%" + ancho + "s", "");
+		for (T clave : claves) {
+			System.out.printf("%" + ancho + "s", clave); //se imprime el encabezado de las columnas
+		}
+		System.out.println();
+		for (T i : claves) { 
+			System.out.printf("%" + ancho + "s", i);
+			Nodo nodoI = nodos.get(i);
+			for (T j : claves) {
+				Nodo nodoJ = nodos.get(j);
+				String valorBinario = nodoI.getVecinos().contains(nodoJ) ? "1" : "0"; //se evalua la relación por un lambda, si el nodo i contiene una relación con el nodo j entonces es 1, sino es 0 (esto es en grafo no dirigido, la relación se da de nodo i a nodo j y de nodo j a nodo i)
+				System.out.printf("%" + ancho + "s", valorBinario); //imprisión del valor binario en la matriz
+			}
+			System.out.println();
+		}
 	}
 	
 	@Override

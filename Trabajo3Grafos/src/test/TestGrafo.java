@@ -55,6 +55,11 @@ public class TestGrafo {
 		grafo.dfs(p1);
 		
 		
+		System.out.println("\n\nMatriz de adyacencia: ");
+		grafo.matrizDeAdyacencia();
+		
+		
+		
 		//---------------------------------------------------------------------------
 		//PRUEBAS CON TIPO INTEGER
 		
@@ -96,8 +101,20 @@ public class TestGrafo {
 		//Recorrido DFS:
 		//1 4 12 11 15 8 5 7
 		
-		*/
+		System.out.println("\n\nMatriz de adyacencia: ");
+		grafo.matrizDeAdyacencia();
 		
+		/* Matriz de adyacencia: 
+            1       4       5       7       8      11      12      15
+    1       0       1       1       0       0       0       0       0
+    4       1       0       1       0       0       0       1       0
+    5       1       1       0       1       1       0       0       0
+    7       0       0       1       0       0       0       0       0
+    8       0       0       1       0       0       0       0       1
+   11       0       0       0       0       0       0       1       1
+   12       0       1       0       0       0       1       0       0
+   15       0       0       0       0       1       1       0       0
+		*/
 		
 		//---------------------------------------------------------------------------
 				//PRUEBAS CON TIPO STRING

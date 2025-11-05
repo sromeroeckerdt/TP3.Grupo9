@@ -87,7 +87,7 @@ public class Persona implements IPersona{
 	
 	
 	public String toString() {
-		return "Persona =" + nombreCompleto + " || ";
+		return nombreCompleto;
 	}
 	
 	
