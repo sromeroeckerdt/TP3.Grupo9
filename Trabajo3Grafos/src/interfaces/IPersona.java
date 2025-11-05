@@ -43,7 +43,7 @@ public interface IPersona {
 	public float getPeso();
 	
 	//Pre-Condición:debe estar instanciada la clase Persona
-		//Post-Condición: debe haber un valor tipo float en del atributo peso
+	//Post-Condición: debe haber un valor tipo float en del atributo peso
 	public void setPeso(float peso);
 	
 	//Pre-Condición:
@@ -51,7 +51,7 @@ public interface IPersona {
 	public Contacto getContactos();
 	
 	//Pre-Condición:debe estar instanciada la clase Persona
-		//Post-Condición: debe haber un valor tipo Contacto en del atributo contacto
+	//Post-Condición: debe haber un valor tipo Contacto en del atributo contacto
 	public void setContactos(Contacto contactos);
 	
 	//Pre-Condición:

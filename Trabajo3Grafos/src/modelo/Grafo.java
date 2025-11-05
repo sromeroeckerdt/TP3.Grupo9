@@ -34,7 +34,8 @@ public class Grafo<T> implements IGrafo<T>{
 			INodo nodoOrigen = nodos.get(origen); //se le asigna el nodo de Map donde comienza la relacion a la variable nodoOrigen de tipo Nodo
 			INodo nodoDestino = nodos.get(destino); //se le asigna el nodo de Map donde decanta la relación a la variable nodoDestino de tipo Nodo
 			nodoOrigen.agregarVecino(nodoDestino); //origen se relaciona con destino-->no dirigido
-			nodoDestino.agregarVecino(nodoOrigen); //destino se relaciona con origen-->no dirigido
+			nodoDestino.agregarVecino(nodoOrigen); //destino se relaciona con origen-->no dirigido //en que de que estemos tratando con un grafo dirigido se tiene que borrar esta linea, el resto de la clase funciona igual, sea grafo dirigido o no
+			//como estamos tratando con un grafo no dirigido la relación va en ambos sentidos, por eso es que tenemos ambas líneas de origen a destino de destino a origen,
 		}
 		
 	}
@@ -87,7 +88,7 @@ public class Grafo<T> implements IGrafo<T>{
 	
 	@Override
 	public void dfs(T valorInicial) { //recorrido en profundidad --> primero va hacia el fondo de un camino de vecino y luego retrocede, hace lo mismo todo el recorrido 
-		if (nodos.containsKey(valorInicial)) { //se chequea que el vertice inicial exista
+		if (nodos.containsKey(valorInicial)) { //se chequea que el vertice inicial exista en el grafo
 		Set<T> visitados = new HashSet<>(); //se crea visitados
 		dfsRec(nodos.get(valorInicial), visitados);
 		}
