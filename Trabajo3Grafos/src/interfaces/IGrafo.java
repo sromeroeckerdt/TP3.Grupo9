@@ -26,8 +26,8 @@ public interface IGrafo<T> {
 	//Post-Condición: se debe lograr recorrer las relaciones en algoritmo dfs (recorrido en profundidad)
 	public void dfs(T valorInicial);
 	
-	//Pre-Condición:
-	//Post-Condición:
+	//Pre-Condición: el nodo (vertice) debe existir en el grafo
+	//Post-Condición: se debe recorrer todo el grafo usando este método en recursividad
 	public void dfsRec(INodo actual, Set<T> visitados);
 
 }
