@@ -87,7 +87,7 @@ public class Grafo<T> implements IGrafo<T>{
 	
 	
 	@Override
-	public void dfs(T valorInicial) { //recorrido en profundidad --> primero va hacia el fondo de un camino de vecino y luego retrocede, hace lo mismo todo el recorrido 
+	public void dfs(T valorInicial) { //recorrido en profundidad > primero va hacia el fondo de un camino de vecino y luego retrocede, hace lo mismo todo el recorrido 
 		if (nodos.containsKey(valorInicial)) { //se chequea que el vertice inicial exista en el grafo
 		Set<T> visitados = new HashSet<>(); //se crea visitados
 		dfsRec(nodos.get(valorInicial), visitados);
