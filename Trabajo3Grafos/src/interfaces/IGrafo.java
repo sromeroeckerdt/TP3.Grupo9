@@ -18,7 +18,7 @@ public interface IGrafo<T> {
 	//Post-Condición: se debe lograr representar las relaciones entre los distintos vertices en formato de matriz de adyacencia
 	void matrizDeAdyacencia();
 	
-	//Pre-Condición: deben haber relaciones entre vertices
+	//Pre-Condición:deben haber relaciones entre vertices
 	//Post-Condición: se debe lograr recorrer las relaciones en algoritmo bfs (recorrido de anchura)
 	public void bfs(T valorInicial);
 	
