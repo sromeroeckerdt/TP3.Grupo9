@@ -37,7 +37,7 @@ public class TestGrafo {
 		grafo.agregarArista(p1, p2);
 		grafo.agregarArista(p1, p3);
 		grafo.agregarArista(p2, p4);
-		grafo.agregarArista(p2, p3);
+		grafo.agregarArista(p2, p3); 
 		grafo.agregarArista(p2, p5);
 		grafo.agregarArista(p3, p6);
 		grafo.agregarArista(p8, p4);
